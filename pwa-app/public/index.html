@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#6b7c3a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Calc 3D" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="description" content="Calculadora de custos para impressão 3D FDM - Casa Oliver" />
+  <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/icon-32.png" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/icon-180.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>Calc 3D · Casa Oliver</title>
+  <style>
+    * { -webkit-tap-highlight-color: transparent; }
+    body { margin: 0; overscroll-behavior: none; }
+    #root { min-height: 100vh; }
+  </style>
+</head>
+<body>
+  <noscript>Habilite o JavaScript para usar esta aplicação.</noscript>
+  <div id="root"></div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
+    }
+  </script>
+</body>
+</html>
